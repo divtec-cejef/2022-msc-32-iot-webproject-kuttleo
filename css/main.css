@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    border: solid 1px #ff0000;
+    border : solid 1px red;
 }
 
 img{
@@ -42,15 +42,20 @@ section{
     color: aliceblue;
 }
 
-table {
-    margin: 30% 30%;
+section div{
+    display: inline-block;
+    margin-top: 30%;
+    margin-bottom: 30%;
     margin-left: auto;
     margin-right: auto;
     background: #4361EE;
-    border-radius: 0px 0px 26px 26px;
+    border-radius: 26px;
+}
 
+table {
     padding: 1em;
 }
+
 tr{
     margin-left: auto;
     margin-right: auto;
@@ -63,10 +68,9 @@ td,th{
 }
 
 caption{
-    margin-left: auto;
-    margin-right: auto;
     background: #4895EF;
-    border-radius: 26px 26px 0px 0px;
+    border-radius: 26px;
+    padding: 1.5em;
 }
 
 ul li{
