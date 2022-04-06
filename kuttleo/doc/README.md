@@ -1,1 +1,0 @@
-Le dossier «doc» contient d’éventuels documents référencés depuis les pages Wiki.
