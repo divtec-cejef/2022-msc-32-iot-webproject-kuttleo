@@ -2,18 +2,38 @@
 
 function getAllMeasures(){
 
-    //  Initiate curl
+    //  Inistialisation
     $ch = curl_init();
-    // Will return the response, if false it print the response
+    // renvoie la réponse, si elle est fausse,elle affichera la réponse.
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    // Set the url
+    // setup de l'url
     curl_setopt($ch, CURLOPT_URL, 'https://kuttleo.divtec.me/api/devices/1/mesures');
-    // Execute
+    // Exécution de la requete
     $result=curl_exec($ch);
-    // Closing
+    // Fermeture de la communication
     curl_close($ch);
 
-    // decodage
+    // decodage du json retourner
+    $measures = json_decode($result, true);
+    return $measures;
+}
+
+function getMeasure($id){
+
+    $urlValue = 'https://kuttleo.divtec.me/api/devices/1/mesures/' + $id;
+
+    //  Inistialisation
+    $ch = curl_init();
+    // renvoie la réponse, si elle est fausse,elle affichera la réponse.
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    // setup de l'url
+    curl_setopt($ch, CURLOPT_URL, $urlValue);
+    // Exécution de la requete
+    $result=curl_exec($ch);
+    // Fermeture de la communication
+    curl_close($ch);
+
+    // decodage du json retourner
     $measures = json_decode($result, true);
     return $measures;
 }
